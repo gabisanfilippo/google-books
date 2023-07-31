@@ -9,6 +9,7 @@ import { Header } from "@/components/Header";
 import ImageLibrary from "@/assets/img/library.png";
 import Image from "next/image";
 import { DottedSection } from "@/components/DottedSection";
+import { Footer } from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 const syne = Syne({ subsets: ["latin"] });
@@ -34,9 +35,9 @@ export default function Home() {
   return (
     <main className={`bg-white ${syne.className}`}>
       <Header />
-      <section className="flex items-center justify-between px-16 pb-20">
+      <section className="flex items-center justify-between sm:px-16 px-8 pb-20">
         <article className=" flex flex-col gap-5 lg:w-2/4 w-full">
-          <h1 className="font-medium text-7xl text-gray-950">
+          <h1 className="font-medium sm:text-7xl text-4xl text-gray-950">
             What book you looking for?
           </h1>
           <p className="text-base text-gray-600 mb-4">
@@ -68,6 +69,7 @@ export default function Home() {
           )}
         </DottedSection>
       )}
+      <Footer />
     </main>
   );
 }
