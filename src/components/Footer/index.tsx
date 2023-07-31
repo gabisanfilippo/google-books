@@ -14,15 +14,15 @@ export const Footer = () => {
       <p className="text-xl text-gray-600">BookStore Project</p>
       <div className="flex gap-4">
         <ButtonLink
-          icon={<IconLinkedIn />}
+          icon={<IconLinkedIn className="w-6 h-6" />}
           url="https://www.linkedin.com/in/gabrielle-coelho-sanfilippo/"
         />
         <ButtonLink
-          icon={<IconGithub />}
+          icon={<IconGithub className="w-6 h-6" />}
           url="https://github.com/gabisanfilippo"
         />
         <ButtonLink
-          icon={<IconFigma />}
+          icon={<IconFigma className="w-6 h-6" />}
           url="https://www.figma.com/file/QsepCHwpZlZvGrmhY27O66/BookStore-%5BShort-Project%5D-(Community)?type=design&node-id=43%3A385&mode=dev"
         />
       </div>
