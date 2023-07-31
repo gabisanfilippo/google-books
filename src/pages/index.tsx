@@ -28,6 +28,7 @@ export default function Home() {
 
   useEffect(() => {
     handleFetchData();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [inputValue]);
 
   return (
