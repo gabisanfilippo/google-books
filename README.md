@@ -1,38 +1,69 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Google Books Explorer
 
-## Getting Started
+![Google Books Explorer](https://i.imgur.com/your-app-image-link.jpg)
 
-First, run the development server:
+## Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+Google Books Explorer is a user-friendly web application to search and explore book details using the Google Books API. It is a two-step process where you can search for a book by name in the first step and then click on a book to get more detailed information in the second step.
+
+## Tech Stack
+
+This project is built with the following technologies:
+
+- **NextJS**: A React.js framework for server-rendered or statically-exported JavaScript apps.
+- **Axios**: A popular, promise-based HTTP client that sports an easy-to-use API and can be used in both the browser and Node.js.
+- **Moment**: A library that allows for the parsing, validating, manipulating, and displaying of dates and times in JavaScript.
+- **Tailwind CSS**: A highly customizable, low-level CSS framework that gives you all of the building blocks you need to build bespoke designs.
+- **Zustand**: A small, fast and scaleable bearbones state-management solution.
+- **Typescript**: An open-source language which builds on JavaScript by adding static type definitions.
+
+## Live Demo
+
+Check out the live demo of the application at: https://google-books-sable.vercel.app/.
+
+## Features
+
+- Search books by name.
+- Detailed view of book's information such as author name, publication date, publisher, and more.
+- Responsive design that works well on both desktop and mobile browsers.
+- Quick loading times and an overall smooth user experience.
+
+## Running Locally
+
+To get started running this project locally, follow these instructions:
+
+1. Clone the repository to your local machine:
+
+```
+git clone https://github.com/your-repo/google-books-explorer.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install the required dependencies:
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```
+npm install
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+3. Start the local development server:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Learn More
+## Contribution
 
-To learn more about Next.js, take a look at the following resources:
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/your-repo/google-books-explorer/issues).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+This project is [MIT](https://choosealicense.com/licenses/mit/) licensed.
 
-## Deploy on Vercel
+## Show your support
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Give a ⭐️ if this project helped you!
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+---
+
+**Note:** Replace `your-repo` and `your-app-image-link` with your Github username and app image link respectively.
