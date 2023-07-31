@@ -1,8 +1,5 @@
+import { Icon } from "@/types";
 import { FC } from "react";
-
-interface Icon {
-  className?: string;
-}
 
 export const IconSearch: FC<Icon> = ({className}) => {
   return (
