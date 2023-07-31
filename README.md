@@ -1,6 +1,4 @@
-# Google Books Explorer
-
-![Google Books Explorer](https://i.imgur.com/your-app-image-link.jpg)
+# BOOKSTORE
 
 ## Overview
 
