@@ -4,7 +4,7 @@ import { Header } from "@/components/Header";
 import { Book, getVolumesById } from "@/services/GET/getVolumesById";
 import { AxiosResponse } from "axios";
 import moment from "moment";
-import { Inter, Syne, Unica_One } from "next/font/google";
+import { Syne, Unica_One } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -69,7 +69,7 @@ export default function BookDetails() {
                     index === dataBook?.data?.volumeInfo?.authors.length - 1
                       ? author
                       : author + ", "
-                  )}
+                  ) || "Não consta"}
                 </p>
               </BoxText>
               <BoxText>
@@ -77,7 +77,7 @@ export default function BookDetails() {
                   <span>Publicado em: </span>
                   {moment(dataBook?.data?.volumeInfo?.publishedDate).format(
                     "DD/MM/YYYY"
-                  )}
+                  ) || "Não consta"}
                 </p>
               </BoxText>
             </article>
@@ -133,7 +133,9 @@ export default function BookDetails() {
                 <div
                   className="text-gray-600 text-base"
                   dangerouslySetInnerHTML={{
-                    __html: dataBook?.data?.volumeInfo?.description,
+                    __html:
+                      dataBook?.data?.volumeInfo?.description ||
+                      "<p>Não consta</p>",
                   }}
                 ></div>
               </div>
