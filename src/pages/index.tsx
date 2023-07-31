@@ -10,6 +10,7 @@ import Image from "next/image";
 import { DottedSection } from "@/components/DottedSection";
 import { Footer } from "@/components/Footer";
 import { useLaunchAdjustment } from "@/stories/useSearchContext";
+import { useDebouncedCallback } from "use-debounce";
 
 const syne = Syne({ subsets: ["latin"] });
 
@@ -25,6 +26,13 @@ export default function Home() {
     const result = await getVolumes(inputValue);
     setDataVolumes(result);
   };
+
+  const debounced = useDebouncedCallback(
+    (value: any) => {
+      setInputValue(value);
+    },
+    1000
+  );
 
   useEffect(() => {
     handleFetchData();
@@ -43,7 +51,7 @@ export default function Home() {
             Explore our catalog and find your next read.
           </p>
           <SearchBar
-            onChange={(event) => setInputValue(event.target.value)}
+            onChange={(event) => debounced(event.target.value)}
             defaultValue={inputValue}
           />
         </article>
