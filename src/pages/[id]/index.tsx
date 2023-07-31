@@ -45,7 +45,7 @@ export default function BookDetails() {
                   className="w-full md:w-52 h-full md:min-w-max"
                   width={200}
                   height={350}
-                  alt={`Livro ${dataBook?.data?.volumeInfo?.title}`}
+                  alt={`Book ${dataBook?.data?.volumeInfo?.title}`}
                   src={
                     dataBook?.data?.volumeInfo?.imageLinks?.medium
                       ? dataBook?.data?.volumeInfo?.imageLinks?.medium

@@ -26,7 +26,7 @@ export const BookItem: FC<IBookItem> = ({ info }) => {
             <Image
               width={120}
               height={300}
-              alt={`Capa do livro ${info.volumeInfo.title}`}
+              alt={`Book cover of ${info.volumeInfo.title}`}
               src={info.volumeInfo.imageLinks.smallThumbnail}
               className="h-full"
             />
