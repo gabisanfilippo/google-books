@@ -10,7 +10,6 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
-const inter = Inter({ subsets: ["latin"] });
 const syne = Syne({ subsets: ["latin"] });
 const unicaOne = Unica_One({ subsets: ["latin"], weight: "400" });
 

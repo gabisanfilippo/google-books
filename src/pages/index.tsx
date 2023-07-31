@@ -1,6 +1,5 @@
-import { Inter, Syne, Unica_One } from "next/font/google";
+import { Syne } from "next/font/google";
 import { SearchBar } from "@/components/SearchBar";
-import { API } from "@/services/_api";
 import { VolumeBooks, getVolumes } from "@/services/GET/getVolumes";
 import { useEffect, useState } from "react";
 import { AxiosResponse } from "axios";
@@ -12,16 +11,13 @@ import { DottedSection } from "@/components/DottedSection";
 import { Footer } from "@/components/Footer";
 import { useLaunchAdjustment } from "@/stories/useSearchContext";
 
-const inter = Inter({ subsets: ["latin"] });
 const syne = Syne({ subsets: ["latin"] });
-const unicaOne = Unica_One({ subsets: ["latin"], weight: "400" });
 
 export default function Home() {
   const [dataVolumes, setDataVolumes] = useState<AxiosResponse<
     VolumeBooks,
     any
   > | null>(null);
-  // const [inputValue, setInputValue] = useState("");
 
   const { inputValue, setInputValue } = useLaunchAdjustment()
 

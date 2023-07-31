@@ -1,4 +1,4 @@
-import {ReactNode, FC} from 'react'
+import { ReactNode, FC } from "react";
 
 interface IBoxText {
   children: ReactNode;
