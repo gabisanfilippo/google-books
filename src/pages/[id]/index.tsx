@@ -46,10 +46,10 @@ export default function BookDetails() {
           {dataBook && (
             <>
               <section className="max-w-5xl m-auto gap-12 flex sm:px-16 md:flex-row flex-col-reverse pb-20 px-8">
-                <article className="w-full md:h-72 h-auto md:w-52 shadow-md flex items-center justify-center m-auto">
+                <article className="w-full md:h-72 h-auto md:w-52 shadow-md flex items-center justify-center m-auto min-w-max">
                   {dataBook?.data?.volumeInfo?.imageLinks ? (
                     <Image
-                      className="w-full md:w-52 h-full md:min-w-max"
+                      className="w-full md:w-52 h-full "
                       width={200}
                       height={350}
                       alt={`Book ${dataBook?.data?.volumeInfo?.title}`}
