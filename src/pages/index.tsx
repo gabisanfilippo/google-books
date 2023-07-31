@@ -23,7 +23,6 @@ export default function Home() {
   useEffect(() => {
     handleFetchData();
   }, [inputValue]);
-  console.log(dataVolumes);
 
   return (
     <main

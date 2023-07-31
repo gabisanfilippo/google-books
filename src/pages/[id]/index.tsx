@@ -27,7 +27,6 @@ export default function BookDetails() {
   useEffect(() => {
     handleFetchData();
   }, [id])
-  console.log(dataBook);
 
   return (
     <main
