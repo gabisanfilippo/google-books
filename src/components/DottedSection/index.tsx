@@ -15,7 +15,7 @@ export const DottedSection: FC<IDottedSection> = ({ children }) => {
       >
         Results
       </h2>
-      <div className="border-dashed border-2 border-gray-950 w-full rounded-3xl py-14 px-20 flex flex-wrap gap-4">
+      <div className="border-dashed border-2 border-gray-950 w-full rounded-3xl py-14 sm:px-20 px-8 flex flex-wrap gap-4">
         {children}
       </div>
     </section>
