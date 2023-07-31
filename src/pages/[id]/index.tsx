@@ -83,7 +83,7 @@ export default function BookDetails() {
               </BoxText>
             </article>
           </section>
-          <section className="max-w-5xl m-auto gap-8 flex sm:px-16 pb-12 px-8">
+          <section className="max-w-5xl m-auto gap-8 flex sm:px-16 pb-12 px-8 flex-wrap lg:flex-nowrap justify-center">
             <article className="flex flex-col gap-8">
               <BoxText>
                 <p className="text-gray-600 text-base">
