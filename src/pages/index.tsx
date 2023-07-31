@@ -10,6 +10,7 @@ import ImageLibrary from "@/assets/img/library.png";
 import Image from "next/image";
 import { DottedSection } from "@/components/DottedSection";
 import { Footer } from "@/components/Footer";
+import { useLaunchAdjustment } from "@/stories/useSearchContext";
 
 const inter = Inter({ subsets: ["latin"] });
 const syne = Syne({ subsets: ["latin"] });
@@ -20,7 +21,9 @@ export default function Home() {
     VolumeBooks,
     any
   > | null>(null);
-  const [inputValue, setInputValue] = useState("");
+  // const [inputValue, setInputValue] = useState("");
+
+  const { inputValue, setInputValue } = useLaunchAdjustment()
 
   const handleFetchData = async () => {
     const result = await getVolumes(inputValue);
@@ -43,7 +46,10 @@ export default function Home() {
           <p className="text-base text-gray-600 mb-4">
             Explore our catalog and find your next read.
           </p>
-          <SearchBar onChange={(event) => setInputValue(event.target.value)} />
+          <SearchBar
+            onChange={(event) => setInputValue(event.target.value)}
+            defaultValue={inputValue}
+          />
         </article>
         <article className="w-96 h-96 bg-cyan-500 rounded-se-2xl rounded-es-2xl relative mr-9 lg:block hidden">
           <Image
