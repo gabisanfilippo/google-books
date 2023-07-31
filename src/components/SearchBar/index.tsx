@@ -7,12 +7,12 @@ interface ISearchBar {
 
 export const SearchBar: FC<ISearchBar> = ({ onChange }) => {
   return (
-    <div className="relative bg-slate-50 w-96 px-4 py-2 rounded">
-      <IconSearch className="absolute left-2 h-6 fill-gray-500" />
+    <div className="relative bg-amber-500 w-96 rounded-3xl h-10 ml-2">
+      <IconSearch className="absolute right-6 h-6 fill-gray-950 z-20" />
       <input
         type="text"
-        className="ml-6 bg-slate-50 w-11/12 outline-none"
-        placeholder="Busque um livro aqui..."
+        className="bg-white w-96 px-4 outline-none rounded-3xl absolute bottom-2 h-10 border-solid border-2 border-gray-950 right-2 z-10"
+        placeholder="Type the name of book..."
         onChange={onChange}
       />
     </div>
