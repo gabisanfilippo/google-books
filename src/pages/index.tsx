@@ -18,20 +18,23 @@ export default function Home() {
   const [dataVolumes, setDataVolumes] = useState<AxiosResponse<
     VolumeBooks,
     any
-  > | null>(null);
+    > | null>(null);
+  const [loading, setLoading] = useState(false)
 
   const { inputValue, setInputValue } = useLaunchAdjustment()
 
   const handleFetchData = async () => {
+    setLoading(true);
     const result = await getVolumes(inputValue);
     setDataVolumes(result);
+    setLoading(false);
   };
 
   const debounced = useDebouncedCallback(
     (value: any) => {
       setInputValue(value);
     },
-    1000
+    500
   );
 
   useEffect(() => {
@@ -67,8 +70,9 @@ export default function Home() {
       </section>
       {inputValue && (
         <DottedSection>
+          {loading ? <p className="m-auto">Carregando...</p> : <>
           {dataVolumes?.data?.items &&
-            dataVolumes.data.items.map((book) => {
+            dataVolumes?.data.items.map((book) => {
               return <BookItem key={book.id} info={book} />;
             })}
           {(!dataVolumes ||
@@ -77,6 +81,8 @@ export default function Home() {
             dataVolumes?.data?.items?.length === 0) && (
             <p className="text-lg">Resultado não encontrado.</p>
           )}
+          </>}
+          
         </DottedSection>
       )}
       <Footer />
